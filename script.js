@@ -21,7 +21,7 @@ recolorAllCardButton.addEventListener('click', () => {
 
 })
 
-//переход на страницу google
+//переход на страницу google 
 
  const googleOpenButton = document.getElementById('open-google-button')
  googleOpenButton.addEventListener('click', openGoogle)
