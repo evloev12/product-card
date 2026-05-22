@@ -5,8 +5,9 @@ const firstCatalogCard = document.querySelector('.card-container')
 const blueHashColor = '#0000FF' ;
 
 recolorFirstButton.addEventListener('click', () => {
-  firstCatalogCard.style.backgroundColor = blueHashColor
-})
+    firstCatalogCard.classList.toggle('active-blue');
+});
+
 
 // покраска всех карточек
 const greenHashColor = '#00ff04'
@@ -14,9 +15,10 @@ const catalogCards  = document.querySelectorAll ('.card-container')
 const recolorAllCardButton =document.getElementById('recolor-all-button')
 
 recolorAllCardButton.addEventListener('click', () => {
-  catalogCards.forEach(
-    card => card.style.backgroundColor = greenHashColor
-  )
+    catalogCards.forEach(card => {
+        card.classList.toggle('active-green');
+    });
+
 })
 
 //переход на страницу google
@@ -33,12 +35,9 @@ recolorAllCardButton.addEventListener('click', () => {
    }
  }
 
- 
-//создаем консоль при нажатии на главный заголовок 
 
- const openKonsoleButton = document.querySelector('.product-selection-title') 
- openKonsoleButton.addEventListener('click', openKonsole);
-
- function openKonsole() {
-   const answer = confirm('Вы случайно нажали на эту кнопку? ')
- }
+//создаем консоль на главный заголовок 
+const divEl = document.getElementsByClassName('product-selection-title')[0]
+divEl.addEventListener('mouseover', function () {
+  alert('курсор вошёл в границы элемента!')
+})
